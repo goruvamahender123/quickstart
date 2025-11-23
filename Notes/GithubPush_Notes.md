@@ -53,6 +53,40 @@
 - Maintaining a README.md to Note Down Important Things
   - Inside your repo, create a file: README.md
 
+## Suppose If any of the steps fail it might be because 
+
+### You are logged into GitHub Desktop / VS Code / Windows Credential Manager using a different GitHub ID (goruvamahender1).Git tries to push using that wrong account → GitHub rejects it.
+
+- FIX — Choose One of These
+  - Fix Method 1: Log out wrong GitHub account & log in correct one (Recommended)
+    - Step 1: Remove saved GitHub credentials
+      - Run this in PowerShell:
+      ```
+      git credential-manager reject https://github.com
+      ```
+      Or open:
+      ```
+      - Windows Search → Credential Manager
+         → Windows Credentials
+         → Remove all entries for github.com
+      ```
+
+### Verify which account Git is using (optional)
+```
+git config --global user.name
+git config --global user.email
+```
+
+## Complete FIRST-TIME Git Workflow (Correct Order
+
+1. Step 1 — Configure Git (ONE TIME)
+```
+git config --global user.name "Mahender"
+git config --global user.email "your_email@domain.com"
+git config --global init.defaultBranch main (Optional Not mandatory - Don't do it)
+Note: After above commands follow the structure of git init, git add . , etc..., mentioned in starting of the notes
+```
+
 
 ## Best Way to Maintain Versions (Basic Instructor Version vs Improved Version)
 
